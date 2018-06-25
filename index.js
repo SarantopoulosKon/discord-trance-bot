@@ -1,14 +1,16 @@
 const Discord = require('discord.js-commando');
 const bot = new Discord.Client();
+const { getRandomItem } = require('./utils/utils');
 const TOKEN = 'NDYwNDUyODczODE0NDA5MjI2.DhE_fg.EAV6LhgInXbXVs8tGp4FHkm5V9Q';
-const badWords = require('./flame-words');
-const badWordsToArray = badWords.split(' ');
+const { flameWords, userNames, flameReplies } = require('./constants');
+const badWordsToArray = flameWords.split(' ');
 
 bot.login(TOKEN);
 
 bot.on('message', (message) => {
-    if (message.author.username === 'Sgus' && badWordsToArray.includes(message.content)) {
-        message.reply('hi');
+    if (userNames.includes(message.author.username) && badWordsToArray.includes(message.content)) {
+        const randomReply = getRandomItem(flameReplies);
+        message.reply(randomReply);
         message.channel.sendMessage
     }
 });
