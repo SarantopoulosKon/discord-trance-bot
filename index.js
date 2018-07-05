@@ -1,7 +1,7 @@
 const Discord = require('discord.js-commando');
 const bot = new Discord.Client();
 const { getRandomItem } = require('./utils/utils');
-const TOKEN = 'NDYwNDUyODczODE0NDA5MjI2.DhE_fg.EAV6LhgInXbXVs8tGp4FHkm5V9Q';
+const { TOKEN } = require('./credentials.json');
 const { flameWords, userNames, flameReplies } = require('./constants');
 const badWordsToArray = flameWords.split(' ');
 
