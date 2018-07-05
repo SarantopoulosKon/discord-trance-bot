@@ -7,12 +7,13 @@
 
 1. Install node.js from [here](https://nodejs.org/en/download/)
 2. Run `npm install`
-3. Add an `api_key.json` to the root directory with a `key` of your google api key
+3. Add an `credentials.json` to the root directory with a `youtubeApiKey` key of your google api key and `TOKEN` key of your discord bot token
 4. Run `node index.js` to start it locally.
 
-### Example of `api_key.json`
+### Example of `credentials.json`
 ````
 {
-    "key": "zHxzxK..."
+    "youtubeApiKey": "zHxzxK...",
+    "TOKEN": "..."
 }
 ````
